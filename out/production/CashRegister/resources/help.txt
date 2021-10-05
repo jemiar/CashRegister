@@ -1,0 +1,16 @@
+Welcome to the Cash Register Application. Below are the commands supported by the app:
+1. show
+    - Display the total amount money in the register and the number of banknotes of $20, $10, $5, $2 and $1 respectively
+2. put a1 a2 a3 a4 a5
+    - ai >= 0 and ai is integer
+    - Put ai amount of banknotes in $20, $10, $5, $2 and $1 respectively
+3. take a1 a2 a3 a4 a5
+    - ai >= 0 and ai is integer
+    - Take out ai amount of banknotes in $20, $10, $5, $2 and $1 respectively
+4. change a
+    - a > 0 and a is integer
+    - Change a amount of money. Return if banknotes if possible else return sorry
+5. help
+    - Display instructions to use the app
+6. quit
+    - Quit the app

@@ -2,8 +2,11 @@ package dev.hoangminh;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class CashRegister {
 
@@ -34,7 +37,11 @@ public class CashRegister {
     //Initialize HELP string by loading it from text file
     static {
         try {
-            HELP = new String(Files.readAllBytes(Paths.get("resources/help.txt")));
+            Path currentRelativePath = Paths.get("");
+            String pwd = currentRelativePath.toAbsolutePath().toString();
+            System.out.println("Current absolute path is: " + pwd);
+            String path = "resources/help.txt";
+            HELP = new String(Files.readAllBytes(Paths.get(path)));
         } catch (IOException e) {
             System.err.println("File not existed. Please check file path");
             e.printStackTrace();
