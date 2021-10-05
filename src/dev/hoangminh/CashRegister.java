@@ -2,7 +2,6 @@ package dev.hoangminh;
 
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,9 +36,6 @@ public class CashRegister {
     //Initialize HELP string by loading it from text file
     static {
         try {
-            Path currentRelativePath = Paths.get("");
-            String pwd = currentRelativePath.toAbsolutePath().toString();
-            System.out.println("Current absolute path is: " + pwd);
             String path = "resources/help.txt";
             HELP = new String(Files.readAllBytes(Paths.get(path)));
         } catch (IOException e) {
